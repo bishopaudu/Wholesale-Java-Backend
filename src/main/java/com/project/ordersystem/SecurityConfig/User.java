@@ -16,13 +16,11 @@ public class User implements UserDetails {
     private String email;
     private String password;
     private String name;
-    private String role;
 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority("ROLE_" + role));
-
+        return null;
     }
 
     @Override
